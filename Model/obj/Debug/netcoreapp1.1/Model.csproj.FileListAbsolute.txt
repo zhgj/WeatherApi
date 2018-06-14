@@ -1,0 +1,8 @@
+c:\users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Model\bin\Debug\netcoreapp1.1\Model.deps.json
+c:\users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Model\bin\Debug\netcoreapp1.1\Model.dll
+c:\users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Model\bin\Debug\netcoreapp1.1\Model.pdb
+c:\users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Model\obj\Debug\netcoreapp1.1\Model.AssemblyInfo.cs
+c:\users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Model\obj\Debug\netcoreapp1.1\Model.dll
+c:\users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Model\obj\Debug\netcoreapp1.1\Model.pdb
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Model\obj\Debug\netcoreapp1.1\Model.csproj.CoreCompileInputs.cache
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Model\obj\Debug\netcoreapp1.1\Model.AssemblyInfoInputs.cache
