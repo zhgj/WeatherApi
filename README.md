@@ -1,7 +1,7 @@
 # WeatherApi
 * 获取今天的天气情况且带天气图标、空气质量、湿度、紫外线、日出日落时间等信息的webapi接口。
 
-* vs 2017 asp.net core 2.1 版本。
+* vs 2017 asp.net core 2.1 版本，支持跨平台部署：`windows`、`macOS`、`linux`平台部署。
 
 * 接口路径 `ip:port/api/weather/xxx`, xxx为地名全拼。
 
