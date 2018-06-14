@@ -1,0 +1,9 @@
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Common\bin\Debug\netcoreapp2.1\Common.deps.json
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Common\bin\Debug\netcoreapp2.1\Common.dll
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Common\bin\Debug\netcoreapp2.1\Common.pdb
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Common\obj\Debug\netcoreapp2.1\Common.csproj.CoreCompileInputs.cache
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Common\obj\Debug\netcoreapp2.1\Common.AssemblyInfoInputs.cache
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Common\obj\Debug\netcoreapp2.1\Common.AssemblyInfo.cs
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Common\obj\Debug\netcoreapp2.1\Common.dll
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Common\obj\Debug\netcoreapp2.1\Common.pdb
+C:\Users\zhanggaojiong\documents\visual studio 2017\Projects\WeatherApi\Common\obj\Debug\netcoreapp2.1\Common.csprojAssemblyReference.cache
