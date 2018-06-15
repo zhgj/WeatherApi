@@ -40,8 +40,8 @@ namespace WeatherApi.Controllers
                     weather.Week = dict1["week"];
                     weather.LunarDay = dict1["lunarDay"];
                     weather.NowTemperature = dict1["nowTemperature"];
-                    weather.LowTemperture = dict1["lowTemperature"];
-                    weather.HighTemperture = dict1["highTemperature"];
+                    weather.LowTemperature = dict1["lowTemperature"];
+                    weather.HighTemperature = dict1["highTemperature"];
                     weather.Describe = dict1["describe"];
                     weather.Code = dict1["code"];
                     weather.Image = dict1["image"];
