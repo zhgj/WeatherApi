@@ -33,12 +33,12 @@
         /// <summary>
         /// 最低气温
         /// </summary>
-        public string LowTemperture { get; set; }
+        public string LowTemperature { get; set; }
 
         /// <summary>
         /// 最高气温
         /// </summary>
-        public string HighTemperture { get; set; }
+        public string HighTemperature { get; set; }
 
         /// <summary>
         /// 天气代码
