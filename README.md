@@ -3,7 +3,7 @@
 
 * vs 2017 asp.net core 2.1 版本，支持跨平台部署：`windows`、`macOS`、`linux`平台部署。
 
-* 接口路径 `ip:port/api/weather/xxx`, xxx为地名全拼。
+* 接口路径 `ip:port/api/weather/xxx`, xxx为地名全拼，端口默认`5000`，ip和port请在`WeatherApi/hosting.json`文件中自己配置。
 
 * 返回结果示例
 ```
@@ -31,7 +31,7 @@
     "sunset": "日落: 18:59"
 }
 ```
-* 如果不想自己部署 可以使用我部署好的。`http://47.75.165.1:5000/api/weather/shanghai`。
+* 如果不想自己部署 可以使用我部署好的。`http://47.75.165.1:5000/api/weather/xxx`, xxx为地名全拼。
 
 * 一些城市全拼的拼音是一样的，如：`巫溪`,`无锡`的全拼都是`wuxi`，这时候你可以尝试`wuxi1`来调用。即全拼后加数字`1`,`2`等来获取天气情况。
 
