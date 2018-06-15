@@ -13,8 +13,8 @@
     "week": "星期四",
     "lunarDay": "戊戌年五月初一",
     "nowTemperature": "30", //当前气温
-    "lowTemperture": "23", //最低气温
-    "highTemperture": "30", //最高气温
+    "lowTemperature": "23", //最低气温
+    "highTemperature": "30", //最高气温
     "code": "100",
     "describe": "晴",
     "image": "/Images/晴.png", //彩色天气图标
