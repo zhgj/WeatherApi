@@ -166,6 +166,13 @@ namespace Common
             weatherDict.Add("week", date[1]);
             weatherDict.Add("lunarDay",date[2]);
             string img_url = weather.Descendants("img").Select(x => x.Attributes["src"].Value).FirstOrDefault();
+            if (!img_url.Contains("http:"))
+            {
+                if (img_url.StartsWith("//"))
+                    img_url = "http:" + img_url;
+                else if (img_url.StartsWith("www"))
+                    img_url = "http://" + img_url;
+            }
             weatherDict.Add("image", img_url);
             var tempAndDescribe = weather.Descendants("b");
             string now_temperature = "";
