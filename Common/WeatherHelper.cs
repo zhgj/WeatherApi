@@ -189,9 +189,11 @@ namespace Common
             weatherDict.Add("lowTemperature", low);
             weatherDict.Add("highTemperature", high);
             weatherDict.Add("describe", temp_describe);
-            if (describe_code.ContainsKey(temp_describe))
+            string[] td_keys = temp_describe.Split('转');
+            string td_key = td_keys.Count() > 1 ? td_keys[1] : td_keys[0];
+            if (describe_code.ContainsKey(td_key))
             {
-                string code = describe_code[temp_describe];
+                string code = describe_code[td_key];
                 weatherDict.Add("code", code);
                 weatherDict.Add("whiteImage", "/Images/weather_icon_white/" + code + ".png");
                 weatherDict.Add("blackImage", "/Images/weather_icon/" + code + ".png");
