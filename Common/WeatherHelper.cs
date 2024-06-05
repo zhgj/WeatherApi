@@ -17,6 +17,7 @@ namespace Common
 
         private Dictionary<string, string> dict = new Dictionary<string, string>();
         private Dictionary<string, string> describe_code = new Dictionary<string, string>();
+        private List<string> userAgentList = new List<string>();
         public WeatherHelper()
         {
             #region 初始化天气代码对应天气描述和图标
@@ -85,6 +86,19 @@ namespace Common
                 if (!describe_code.ContainsKey(describe[1]))
                     describe_code.Add(describe[1], describe[0]);
             }
+
+            userAgentList.AddRange(new string[] {
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36 Edg/125.0.0.0",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36",
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Firefox/78.0",
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.75 Safari/537.36 Edg/86.0.622.38",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36",
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Firefox/89.0",
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"});
         }
         public Dictionary<string, string> GetTodayWeather()
         {
@@ -150,7 +164,10 @@ namespace Common
         public Dictionary<string, string> GetTodayWeather2(string weatherUrl,string weatherImagePath)
         {
             var web = new HtmlWeb();
-            var doc = web.Load(weatherUrl);
+            Random random = new Random();
+            int randomNumber = random.Next(0, 12);
+            web.UserAgent = userAgentList[randomNumber];
+            var doc = web.Load(weatherUrl, "POST");
 
             HtmlNode weather_info = doc.QuerySelector(".weather_info");
             
@@ -160,7 +177,7 @@ namespace Common
             HtmlNode weather = weather_info.QuerySelector(".weather");
             Dictionary<string, string> weatherDict = new Dictionary<string, string>();
             HtmlNode name = weather_info.QuerySelector(".name");
-            string region = name.Descendants("h2").FirstOrDefault().InnerText.Trim();
+            string region = name.Descendants("h1").FirstOrDefault().InnerText.Trim().Replace("天气", "");
             weatherDict.Add("region", region);
             weatherDict.Add("day", date[0]);
             weatherDict.Add("week", date[1]);
